@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-06-27T16:58:20.849602" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Ip Print" source="C:\Users\manjha1\PycharmProjects\TestPython\basics\test_ip_print.robot">
+<test id="s1-t1" name="Test with input1.json" line="11">
+<kw name="Custom Run Process">
+<kw name="Run" owner="OperatingSystem">
+<msg time="2024-06-27T16:58:20.896875" level="INFO">Running command 'python ip_print.py input1.json 2&gt;&amp;1'.</msg>
+<msg time="2024-06-27T16:58:21.055089" level="INFO">${output} = 192.168.101.101
+192.168.101.70
+192.168.101.153</msg>
+<var>${output}</var>
+<arg>${command} ${file} ${json_file}</arg>
+<doc>Runs the given command in the system and returns the output.</doc>
+<status status="PASS" start="2024-06-27T16:58:20.881246" elapsed="0.173843"/>
+</kw>
+<return>
+<value>${output}</value>
+<status status="PASS" start="2024-06-27T16:58:21.055089" elapsed="0.000000"/>
+</return>
+<msg time="2024-06-27T16:58:21.055089" level="INFO">${output} = 192.168.101.101
+192.168.101.70
+192.168.101.153</msg>
+<var>${output}</var>
+<arg>python</arg>
+<arg>ip_print.py</arg>
+<arg>input1.json</arg>
+<status status="PASS" start="2024-06-27T16:58:20.881246" elapsed="0.173843"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>192.168.101.101</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-06-27T16:58:21.055089" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>192.168.101.70</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-06-27T16:58:21.055089" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>192.168.101.153</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-06-27T16:58:21.055089" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-06-27T16:58:20.881246" elapsed="0.173843"/>
+</test>
+<test id="s1-t2" name="Test with input2.json" line="17">
+<kw name="Custom Run Process">
+<kw name="Run" owner="OperatingSystem">
+<msg time="2024-06-27T16:58:21.074606" level="INFO">Running command 'python ip_print.py input2.json 2&gt;&amp;1'.</msg>
+<msg time="2024-06-27T16:58:21.228834" level="INFO">${output} = 192.168.102.33 10.0.0.87
+192.168.103.74 10.0.0.77
+192.168.102.155 10.0.0.99</msg>
+<var>${output}</var>
+<arg>${command} ${file} ${json_file}</arg>
+<doc>Runs the given command in the system and returns the output.</doc>
+<status status="PASS" start="2024-06-27T16:58:21.071596" elapsed="0.157238"/>
+</kw>
+<return>
+<value>${output}</value>
+<status status="PASS" start="2024-06-27T16:58:21.228834" elapsed="0.000000"/>
+</return>
+<msg time="2024-06-27T16:58:21.228834" level="INFO">${output} = 192.168.102.33 10.0.0.87
+192.168.103.74 10.0.0.77
+192.168.102.155 10.0.0.99</msg>
+<var>${output}</var>
+<arg>python</arg>
+<arg>ip_print.py</arg>
+<arg>input2.json</arg>
+<status status="PASS" start="2024-06-27T16:58:21.070916" elapsed="0.157918"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>192.168.102.33</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-06-27T16:58:21.228834" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>192.168.103.74</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-06-27T16:58:21.228834" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>192.168.102.155</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-06-27T16:58:21.228834" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>10.0.0.77</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-06-27T16:58:21.228834" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>10.0.0.87</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-06-27T16:58:21.228834" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>10.0.0.99</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-06-27T16:58:21.228834" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-06-27T16:58:21.070916" elapsed="0.157918"/>
+</test>
+<status status="PASS" start="2024-06-27T16:58:20.849602" elapsed="0.379232"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Test Ip Print">Test Ip Print</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-27T16:58:20.849602" level="WARN">Error in file 'C:\Users\manjha1\PycharmProjects\TestPython\basics\test_ip_print.robot' on line 8: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

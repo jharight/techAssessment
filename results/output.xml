@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-06-27T02:16:57.247720" rpa="false" schemaversion="5">
+<suite id="s1" name="Print Ip Addresses" source="C:\Users\manjha1\PycharmProjects\TestPython\basics\print_ip_addresses.robot">
+<test id="s1-t1" name="Print IP Addresses" line="9">
+<kw name="Import Library" owner="BuiltIn">
+<arg>JSONProcessor</arg>
+<arg>${json_file}</arg>
+<doc>Imports a library with the given name and optional arguments.</doc>
+<status status="PASS" start="2024-06-27T02:16:57.278962" elapsed="0.000000"/>
+</kw>
+<kw name="Get Vm Private Ips" owner="JSONProcessor">
+<msg time="2024-06-27T02:16:57.278962" level="INFO">${vm_private_ips} = {'jenkins-agent-vm-1': '192.168.101.101', 'jenkins-agent-vm-2': '192.168.101.70', 'jenkins-agent-vm-3': '192.168.101.153'}</msg>
+<var>${vm_private_ips}</var>
+<status status="PASS" start="2024-06-27T02:16:57.278962" elapsed="0.000000"/>
+</kw>
+<kw name="Get Network Vms" owner="JSONProcessor">
+<msg time="2024-06-27T02:16:57.293476" level="INFO">${network_ips} = {}</msg>
+<var>${network_ips}</var>
+<status status="PASS" start="2024-06-27T02:16:57.293476" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-27T02:16:57.293476" level="INFO">"VM Private IPs: {'jenkins-agent-vm-1': '192.168.101.101', 'jenkins-agent-vm-2': '192.168.101.70', 'jenkins-agent-vm-3': '192.168.101.153'}"</msg>
+<arg>"VM Private IPs: ${vm_private_ips}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-27T02:16:57.293476" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-27T02:16:57.293476" level="INFO">"Network IPs: {}"</msg>
+<arg>"Network IPs: ${network_ips}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-27T02:16:57.293476" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-06-27T02:16:57.278962" elapsed="0.016022"/>
+</test>
+<status status="PASS" start="2024-06-27T02:16:57.247720" elapsed="0.047264"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Print Ip Addresses">Print Ip Addresses</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

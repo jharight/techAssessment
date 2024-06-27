@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('input1') {
+            steps {
+                script {
+                    checkout scm
+                    sh 'python3 ip_print.py input1.json'
+                }
+            }
+        }
+
+        stage('input2') {
+            steps {
+                script {
+                    checkout scm
+                    sh 'python3 ip_print.py input2.json'
+                }
+            }
+        }
+    }
+}
